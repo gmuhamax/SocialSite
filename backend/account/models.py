@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class User(models.Model):
+    ava = models.ImageField()
+    username = models.CharField(max_length=30, unique=True)
+    password = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=30)
+    second_name = models.CharField(max_length=30)
